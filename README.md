@@ -1,7 +1,9 @@
-LunaSysMgr
-==========
+LunaSysMgr - Experimental
+=========================
 
-LunaSysMgr
+LunaSysMgr - Experimental
+
+Things that may *never* make it into Mainline.
 
 For version 3.0.5 of webOS
 
