@@ -326,6 +326,8 @@ bool SystemUiController::handleKeyEvent(QKeyEvent *event)
 				return false;
 
         case Qt::Key_Escape: // maps to the open/close notifications key on BT keyboards
+            return false;    // let me use the Esc key. I don't care about notifications 
+                             // as much as about using Vim.
         case Qt::Key_Search: // maps to universal search toggle
         case Qt::Key_Super_L: // maps to the card view key (launcher gesture)
         case Qt::Key_Keyboard:
