@@ -575,27 +575,10 @@ bool SystemUiController::handleKeyEvent(QKeyEvent *event)
             Q_EMIT signalToggleLauncher();
 			return true;
 		}
-        case Qt::Key_Escape: {
-
-            if (m_deviceLocked || m_inDockMode || m_emergencyMode)
-                return true;
-
-            if (m_alertVisible) {
-                Q_EMIT signalCloseAlert();
-            }
-
-            if (m_menuVisible) {
-                Q_EMIT signalHideMenu();
-            }
-
-            if (m_dashboardOpened) {
-                closeDashboard(true);
-            }
-            else {
-                openDashboard();
-            }
-            return true;
-        }
+        case Qt::Key_Escape:
+	    // don't do anything smart: I want Escape to mean Escape, not Show
+	    // the Notifications
+            return false;
         case Qt::Key_Search: {
 
             if (m_deviceLocked || m_inDockMode || m_emergencyMode)
